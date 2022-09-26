@@ -1,0 +1,213 @@
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background: url(https://images.unsplash.com/photo-1502657877623-f66bf489d236?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTIyODcxNTU&ixlib=rb-1.2.1&q=85) no-repeat;
+    background-size: cover;
+    height: 100vh;
+   }
+  
+  
+  .box {
+    width: 50%;
+    height:300px;
+    margin: auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+  .button {
+     margin: auto;
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+      border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .button:hover {
+    background:#8ee8ed;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    background: -webkit-linear-gradient(blueviolet, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color:linear-gradient(45deg, blueviolet, blue);
+  }
+  .popup .close:hover {
+    color: #06D85F;
+    
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+   }
+  /*Let's make it appear when the page loads*/
+  .overlay:target:before {
+      display: none;
+  }
+  .overlay:before {
+    content:"";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    z-index: 9;
+  }
+  
+  .overlay .popup {
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    width: 30%;
+    position:fixed;
+    top: 0;
+    left: 35%;
+    padding: 25px;
+    margin: 70px auto;
+    z-index: 10;
+    
+   
+  }
+  .overlay:target .popup {
+      top: -100%;
+      left: -100%;
+    
+  }
+  
+  @media screen and (max-width: 880px){
+    .box{
+      width: 70%;
+    }
+    .overlay .popup{
+      width: 70%;
+      left: 15%;
+    }
+  }
+  h2{
+    color: #fff;
+      font-family: 'Exo', sans-serif;
+    font-weight:5;
+  }
+  /*login*/
+  .box input[type=text]{
+      width: 250px;
+      height: 30px;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.6);
+      border-radius: 2px;
+      color: #fff;
+      font-family: 'Exo', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 4px;
+    margin-top:2.5px;
+  }
+  
+  .box input[type=password]{
+      width: 250px;
+      height: 30px;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.6);
+      border-radius: 2px;
+      color: #fff;
+      font-family: 'Exo', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 4px;
+      margin-top: 10px;
+  }
+  
+  .box input[type=button]{
+      width: 260px;
+      height: 35px;
+      background: #fff;
+      border: 1px solid #fff;
+      cursor: pointer;
+      border-radius: 2px;
+      color: #a18d6c;
+      font-family: 'Exo', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 6px;
+      margin-top: 10px;
+  }
+  
+  .box input[type=button]:hover{
+      opacity: 0.8;
+  }
+  
+  .box input[type=button]:active{
+      opacity: 0.6;
+  }
+  
+  .box input[type=text]:focus{
+      outline: none;
+      border: 1px solid rgba(255,255,255,0.9);
+  }
+  
+  .box input[type=password]:focus{
+      outline: none;
+      border: 1px solid rgba(255,255,255,0.9);
+  }
+  
+  .box input[type=button]:focus{
+      outline: none;
+  }
+  
+  ::-webkit-input-placeholder{
+     color: rgba(255,255,255,0.6);
+  }
+  
+  ::-moz-input-placeholder{
+     color: rgba(255,255,255,0.6);
+  }
+  /*Signup*/
+  .formm {
+              padding: 1rem;
+              text-align: center;
+          }
+  
+          .formm>input {
+              width: 60%;
+              margin: 1rem;
+              padding: 1rem 0.25rem 1rem 1rem;
+              border-radius: 2rem;
+              border: none;
+              outline: none;
+              font-family: 'Raleway';
+              background-color:#212121;
+          }
+  
+          .formm>input:not(.butn):focus {
+              background-color: whitesmoke;
+          }
+  
+          .formm>.butn {
+              background: linear-gradient(45deg, blueviolet, blue);
+              color: whitesmoke;
+              font-weight: bold;
+              width: 40%;
+              cursor: pointer;
+          }
